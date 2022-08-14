@@ -3,22 +3,22 @@ import Head from 'next/head';
 import siteMetadata from '../data/siteMetadata';
 import dynamic from 'next/dynamic';
 
-const SingleMarketplace = dynamic(
-  () => import('../components/marketplace/SingleCurrencyMarketplace'),
+const MarketplaceWithFilter = dynamic(
+  () => import('../components/marketplace/MarketplaceWithFilter'),
   { ssr: false }
 );
 
-const Home: NextPage = () => {
+const Filter: NextPage = () => {
   return (
     <>
       <Head>
-        <title>{siteMetadata.siteName} | Home</title>
+        <title>{siteMetadata.siteName} | Sell</title>
       </Head>
       <div className="">
-        <SingleMarketplace />
+        <MarketplaceWithFilter />
       </div>
     </>
   );
 };
 
-export default Home;
+export default Filter;
