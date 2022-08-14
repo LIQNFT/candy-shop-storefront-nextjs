@@ -23,7 +23,7 @@ One-click solution to clone this project to your GitHub and deploy the prod pack
 Your only task will be to customize your GitHub fork of this project and commit updates.
 Vercel will automatically deploy new prod packages for each new commit.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FLIQNFT%2Fcandy-shop-storefront&env=REACT_APP_SOLANA_NETWORK,REACT_APP_SOLANA_RPC_HOST,REACT_APP_CANDY_SHOP_CREATOR_ADDRESS,REACT_APP_CANDY_SHOP_TREASURY_MINT,REACT_APP_CANDY_SHOP_PROGRAM_ID&envDescription=Please%20refer%20to%20the%20README&envLink=https%3A%2F%2Fgithub.com%2FLIQNFT%2Fcandy-machine-v2-with-marketplace&demo-title=Solana%20NFT%20Marketplace&demo-description=Host%20your%20own%20marketplace%20with%20Candy%20Shop&demo-url=https%3A%2F%2Fgithub.com%2FLIQNFT%2Fcandy-shop-storefront&demo-image=https%3A%2F%2Fuser-images.githubusercontent.com%2F89616076%2F163665962-f8f9fa00-2143-4234-bb35-13955b55220e.png)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FLIQNFT%2Fcandy-shop-storefront-nextjs%2F&env=NEXT_PUBLIC_SOLANA_NETWORK,NEXT_PUBLIC_SOLANA_RPC_HOST,NEXT_PUBLIC_CANDY_MACHINE_ID,NEXT_PUBLIC_CANDY_SHOP_CREATOR_ADDRESS,NEXT_PUBLIC_CANDY_SHOP_TREASURY_MINT,NEXT_PUBLIC_CANDY_SHOP_PROGRAM_ID,NEXT_PUBLIC_SPL_TOKEN_TO_MINT_NAME,NEXT_PUBLIC_SPL_TOKEN_TO_MINT_DECIMALS,CI)
 
 ## Setup
 
@@ -36,7 +36,7 @@ Vercel will automatically deploy new prod packages for each new commit.
 #### 1. Fork the project & clone it. Example:
 
 ```
-git clone https://github.com/LIQNFT/candy-shop-storefront/
+git clone https://github.com/LIQNFT/candy-shop-storefront-nextjs
 ```
 
 #### 2. Define your environment variables (.env file)
