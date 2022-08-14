@@ -1,13 +1,12 @@
-import Head from 'next/head';
 import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
+import { ThemeProvider } from 'next-themes';
 import { AppProps } from 'next/app';
 import dynamic from 'next/dynamic';
 import { FC, ReactNode } from 'react';
+import { ToastContainer } from 'react-toastify';
+import Layout from '../components/layout/Layout';
 import UserContextProvider from '../context/UserContextProvider';
 import { WalletBalanceProvider } from '../context/WalletBalanceProvider';
-import Layout from '../components/layout/Layout';
-import { ToastContainer } from 'react-toastify';
-import { ThemeProvider } from 'next-themes';
 // import MouseContextProvider from "../context/MouseContextProvider";
 // import CustomCursor from "../components/cursor/CustomCursor";
 
@@ -39,16 +38,7 @@ const CandyShopDataValidator = dynamic<any>(
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
-      <Head>
-        <title>Paradima - Your own NFT Marketplace</title>
-        <meta name="description" content="I'll suck your dick for 1 PENNY" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta property="og:image" content="/og-image.png" />
-        {/* <link
-          href="https://fonts.cdnfonts.com/css/ms-scratch"
-          rel="stylesheet"
-        /> */}
-      </Head>
+
       <ThemeProvider enableSystem={false} disableTransitionOnChange>
         {/* <MouseContextProvider> */}
         <WalletConnectionProvider>
