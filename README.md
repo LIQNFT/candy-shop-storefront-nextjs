@@ -4,6 +4,7 @@ Solana NFT storefront powered by [Candy Shop](https://github.com/LIQNFT/candy-sh
 
 - [Docs](https://liqnft.gitbook.io/candy-shop/candy-shop/getting-started)
 - [Website](https://candy.liqnft.com/)
+- [Demo](https://candy.metadefi.com/) 
 
 Key features:
 
