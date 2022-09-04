@@ -52,7 +52,14 @@ export default function Menu() {
               <li>
                 <Link href="/filter">
                   <a className="menu-bar-link" onClick={menuToggle}>
-                    Filter
+                    With Filter
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/activity">
+                  <a className="menu-bar-link" onClick={menuToggle}>
+                    Activity
                   </a>
                 </Link>
               </li>
