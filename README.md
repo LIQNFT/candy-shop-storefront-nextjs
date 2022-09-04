@@ -15,7 +15,7 @@ Key features:
 - Multi currency marketplace
 - Marketplace activity
 
-<img width="1363" alt="Solana NFT Storefront NextJS" src="https://candy.metadefi.com/storefront-demo.png">
+<img width="1363" alt="Solana NFT Storefront NextJS" src="https://candy.metadefi.com/storefront.png">
 
 ## Quick start
 
