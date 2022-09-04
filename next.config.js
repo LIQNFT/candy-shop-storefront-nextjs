@@ -4,7 +4,7 @@ const withTM = require('next-transpile-modules')(['@blocto/sdk']);
 /** @type {import('next').NextConfig} */
 module.exports = withTM({
   reactStrictMode: true,
-  webpack5: true,
+  // webpack5: true,
   webpack: (config) => {
     config.resolve.fallback = {
       fs: false,

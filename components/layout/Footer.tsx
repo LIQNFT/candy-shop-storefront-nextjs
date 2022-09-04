@@ -1,16 +1,10 @@
 // import { DevTip } from "../DevTip";
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
+import { BsDiscord, BsGithub, BsTwitter } from 'react-icons/bs';
 import useWalletBalance from '../../context/WalletBalanceProvider';
-import ThemeMode from '../theme/ThemeMode';
 import siteData from '../../data/siteMetadata';
-import {
-  BsTwitter,
-  BsInstagram,
-  BsDiscord,
-  BsFacebook,
-  BsGithub,
-} from 'react-icons/bs';
+import ThemeMode from '../theme/ThemeMode';
 
 const Footer = () => {
   const { walletAddress, balance } = useWalletBalance();
@@ -43,7 +37,7 @@ const Footer = () => {
             Twitter
           </a>
         )}
-        {siteData.social.instagram && (
+        {/* {siteData.social.instagram && (
           <a
             className="text-blue-600 hover:underline flex items-center gap-1 font-black text-sm md:text-base"
             href={siteData.social.instagram}
@@ -53,7 +47,7 @@ const Footer = () => {
             <BsInstagram />
             Instagram
           </a>
-        )}
+        )} */}
         {siteData.social.discord && (
           <a
             className="text-blue-600 hover:underline flex items-center gap-1 font-black text-sm md:text-base"
@@ -65,7 +59,7 @@ const Footer = () => {
             Discord
           </a>
         )}
-        {siteData.social.facebook && (
+        {/* {siteData.social.facebook && (
           <a
             className="text-blue-600 hover:underline flex items-center gap-1 font-black text-sm md:text-base"
             href={siteData.social.facebook}
@@ -75,7 +69,7 @@ const Footer = () => {
             <BsFacebook />
             Facebook
           </a>
-        )}
+        )} */}
       </div>
       <div className="flex  justify-between flex-wrap-reverse">
         <div className="flex flex-col justify-end">
@@ -87,7 +81,10 @@ const Footer = () => {
             <p className="text-2xs text-pageBG">Balance: ◎ {balance}</p>
           )}
           <div className="footer-button">
-            <WalletMultiButton startIcon={null} className="btn-wallet--footer">
+            <WalletMultiButton
+              startIcon={undefined}
+              className="btn-wallet--footer"
+            >
               <div className="relative ">
                 {walletAddress ? (
                   <span>

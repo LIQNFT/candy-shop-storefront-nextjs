@@ -58,7 +58,7 @@ const Header = () => {
       </div>
       {/* Wallet Connect Button */}
       <div className="wallet">
-        <WalletMultiButton startIcon={null} className="btn-wallet">
+        <WalletMultiButton startIcon={undefined} className="btn-wallet">
           <div className="relative ">
             <FaWallet className="btn-wallet-icon inline-block" />
 

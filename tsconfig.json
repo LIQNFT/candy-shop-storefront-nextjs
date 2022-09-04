@@ -5,10 +5,10 @@
     "**/*.tsx",
     "context/WalletBalanceProvider.jsx",
     "context/UserContextProvider.jsx",
-    "pages/_document.js",
-    "components/layout/Footer.jsx",
-    "components/layout/Layout.jsx",
-    "components/layout/Header.jsx"
+    "pages/_document.tsx",
+    "components/layout/Footer.tsx",
+    "components/layout/Layout.tsx",
+    "components/layout/Header.tsx"
   ],
   "exclude": ["node_modules"],
   "compilerOptions": {
