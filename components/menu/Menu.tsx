@@ -57,6 +57,13 @@ export default function Menu() {
                 </Link>
               </li>
               <li>
+                <Link href="/url">
+                  <a className="menu-bar-link" onClick={menuToggle}>
+                    With Url
+                  </a>
+                </Link>
+              </li>
+              <li>
                 <Link href="/activity">
                   <a className="menu-bar-link" onClick={menuToggle}>
                     Activity
