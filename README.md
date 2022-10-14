@@ -33,7 +33,7 @@ One-click solution to clone this project to your GitHub and deploy the prod pack
 Your only task will be to customize your GitHub fork of this project and commit updates.
 Vercel will automatically deploy new prod packages for each new commit.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FLIQNFT%2Fcandy-shop-storefront-nextjs%2F&env=NEXT_PUBLIC_SOLANA_NETWORK,NEXT_PUBLIC_SOLANA_RPC_HOST,NEXT_PUBLIC_CANDY_MACHINE_ID,NEXT_PUBLIC_CANDY_SHOP_CREATOR_ADDRESS,NEXT_PUBLIC_CANDY_SHOP_TREASURY_MINT,NEXT_PUBLIC_CANDY_SHOP_PROGRAM_ID,NEXT_PUBLIC_SPL_TOKEN_TO_MINT_NAME,NEXT_PUBLIC_SPL_TOKEN_TO_MINT_DECIMALS,CI)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FLIQNFT%2Fcandy-shop-storefront-nextjs%2F&env=NEXT_PUBLIC_SOLANA_NETWORK,NEXT_PUBLIC_SOLANA_RPC_HOST,NEXT_PUBLIC_CANDY_SHOP_CREATOR_ADDRESS,NEXT_PUBLIC_CANDY_SHOP_TREASURY_MINT,NEXT_PUBLIC_CANDY_SHOP_PROGRAM_ID,NEXT_PUBLIC_SPL_TOKEN_TO_MINT_NAME,NEXT_PUBLIC_SPL_TOKEN_TO_MINT_DECIMALS,CI)
 
 ## Setup
 
@@ -57,7 +57,6 @@ Rename the `.env.example` file at the root directory to `.env` and update the fo
 NEXT_PUBLIC_CANDY_SHOP_CREATOR_ADDRESS=Fo2cXie4UwreZi7LHMpnsyVPvzuo4FMwAVbSUYQsmbsh
 NEXT_PUBLIC_CANDY_SHOP_TREASURY_MINT=So11111111111111111111111111111111111111112
 NEXT_PUBLIC_CANDY_SHOP_PROGRAM_ID=csa8JpYfKSZajP7JzxnJipUL3qagub1z29hLvp578iN
-
 ```
 
 You may get these parameters by creating a shop [here](https://candy.liqnft.com/shop).
