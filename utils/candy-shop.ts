@@ -22,6 +22,10 @@ const candyShop = new CandyShop({
       process.env.NEXT_PUBLIC_SPL_TOKEN_TO_MINT_DECIMALS || 9
     ),
     currencySymbol: process.env.NEXT_PUBLIC_SPL_TOKEN_TO_MINT_NAME || 'SOL',
+    mainnetConnectionUrl:
+      NETWORK === 'mainnet-beta'
+        ? process.env.NEXT_PUBLIC_SOLANA_RPC_HOST
+        : undefined,
   },
 });
 
