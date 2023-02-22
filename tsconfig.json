@@ -26,6 +26,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "removeComments": true
+    "removeComments": true,
+    "baseUrl": "."
   }
 }

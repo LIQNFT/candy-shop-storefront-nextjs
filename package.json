@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.6.6",
-    "@liqnft/candy-shop": "^0.5.13",
+    "@liqnft/candy-shop": "0.5.43",
     "@project-serum/anchor": "^0.25.0",
     "@solana/wallet-adapter-base": "^0.9.9",
     "@solana/wallet-adapter-react": "^0.15.8",
@@ -44,7 +44,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
-    "react-toastify": "^9.0.7"
+    "react-toastify": "^9.0.7",
+    "zustand": "^4.3.3"
   },
   "devDependencies": {
     "@types/node": "18.6.0",

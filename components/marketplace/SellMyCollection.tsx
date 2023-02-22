@@ -1,10 +1,14 @@
 import { Sell } from '@liqnft/candy-shop';
 import { useAnchorWallet } from '@solana/wallet-adapter-react';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
-import { candyShop } from '../../utils/candy-shop';
+import { useStore } from 'hooks/useStore';
 
 const SellMyCollection = () => {
+  const candyShop = useStore((s) => s.candyShop);
+
   const wallet = useAnchorWallet();
+  if (!candyShop) return null;
+
   return (
     <div>
       <Sell

@@ -1,12 +1,15 @@
+import { CandyShop } from '@liqnft/candy-shop-sdk';
 import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
 import { ThemeProvider } from 'next-themes';
 import { AppProps } from 'next/app';
 import dynamic from 'next/dynamic';
-import { FC, ReactNode } from 'react';
+import { FC, ReactNode, useEffect } from 'react';
 import { ToastContainer } from 'react-toastify';
 import Layout from '../components/layout/Layout';
 import UserContextProvider from '../context/UserContextProvider';
 import { WalletBalanceProvider } from '../context/WalletBalanceProvider';
+import { useStore } from '../hooks/useStore';
+import { NETWORK } from '../utils/candy-shop';
 // import MouseContextProvider from "../context/MouseContextProvider";
 // import CustomCursor from "../components/cursor/CustomCursor";
 
@@ -36,9 +39,35 @@ const CandyShopDataValidator = dynamic<any>(
 );
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
+  const setCandyShop = useStore((s) => s.setCandyShop);
+
+  useEffect(() => {
+    CandyShop.initSolCandyShop({
+      shopCreatorAddress: process.env.NEXT_PUBLIC_CANDY_SHOP_CREATOR_ADDRESS!,
+      treasuryMint: process.env.NEXT_PUBLIC_CANDY_SHOP_TREASURY_MINT!,
+      programId: process.env.NEXT_PUBLIC_CANDY_SHOP_PROGRAM_ID!,
+      env: NETWORK,
+      settings: {
+        currencyDecimals: Number(
+          process.env.NEXT_PUBLIC_SPL_TOKEN_TO_MINT_DECIMALS || 9
+        ),
+        currencySymbol: process.env.NEXT_PUBLIC_SPL_TOKEN_TO_MINT_NAME || 'SOL',
+        connectionUrl:
+          NETWORK === 'mainnet-beta'
+            ? process.env.NEXT_PUBLIC_SOLANA_RPC_HOST
+            : undefined,
+      },
+    })
+      .then((candyShop) => {
+        setCandyShop(candyShop);
+      })
+      .catch((error: Error) => {
+        console.log('Get CandyShop failed, error: ', error);
+      });
+  }, [pageProps.candyShop, setCandyShop]);
+
   return (
     <>
-
       <ThemeProvider enableSystem={false} disableTransitionOnChange>
         {/* <MouseContextProvider> */}
         <WalletConnectionProvider>
