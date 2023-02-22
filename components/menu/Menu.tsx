@@ -1,14 +1,8 @@
 import Link from 'next/link';
 import { useUserContext } from '../../context/UserContextProvider';
-import useWalletBalance from '../../context/WalletBalanceProvider';
-// import { isBrowser } from "../../utils/utils";
-
-// To Do
-// Add ESC key to close
 
 export default function Menu() {
   const { menuOpen, setMenuOpen } = useUserContext();
-  const { walletAddress } = useWalletBalance();
 
   const menuToggle = () => {
     setMenuOpen(!menuOpen);

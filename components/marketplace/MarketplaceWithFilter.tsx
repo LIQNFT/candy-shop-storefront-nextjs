@@ -1,19 +1,20 @@
 import { Orders, Stat } from '@liqnft/candy-shop';
 import { useAnchorWallet } from '@solana/wallet-adapter-react';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
-import { candyShop } from '../../utils/candy-shop';
+import { useStore } from 'hooks/useStore';
+import React from 'react';
 
 const MarketplaceWithFilter = () => {
   const wallet = useAnchorWallet();
+  const candyShop = useStore((s) => s.candyShop);
+  if (!candyShop) return null;
 
   return (
     <>
       <Stat
         candyShop={candyShop}
         title={'Marketplace'}
-        description={
-          'Enable users to filter by collections and search for NFTs.'
-        }
+        description="Enable users to filter by collections and search for NFTs."
         style={{ paddingBottom: 50 }}
       />
       <Orders
@@ -23,6 +24,7 @@ const MarketplaceWithFilter = () => {
         filters={FILTERS}
         filterSearch
         search
+        filterType="dropdown"
       />
     </>
   );
@@ -30,7 +32,7 @@ const MarketplaceWithFilter = () => {
 
 export default MarketplaceWithFilter;
 
-const FILTERS = [
+const FILTERS: React.ComponentProps<typeof Orders>['filters'] = [
   { name: 'Puppies', collectionId: '1', identifier: 2036309415 },
   { name: 'Shibas', collectionId: '2', identifier: 1235887132 },
   {
@@ -42,11 +44,6 @@ const FILTERS = [
     name: 'Purple Puppies',
     collectionId: '4',
     identifier: 2036309415,
-    attribute: [{ backgrounds: 'gradient_purple' }],
-  },
-  {
-    name: 'White eye',
-    collectionId: '5',
-    attribute: [{ Shine: 'Shapes' }, { Eyeball: 'White' }],
+    attribute: { backgrounds: 'gradient_purple' },
   },
 ];
